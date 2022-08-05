@@ -60,15 +60,18 @@ namespace Calculator
             resultLabel.Content = "0";
         }
 
-        private void sevenButton_Click(object sender, RoutedEventArgs e)
+        private void NumberButton_Click(object sender, RoutedEventArgs e)
         {
+            Button button = (Button)sender;
+
+
             if (resultLabel.Content.ToString() == "0")
             {
-                resultLabel.Content = "7";
+                resultLabel.Content = button.Content;
             }
             else
             {
-                resultLabel.Content = $"{resultLabel.Content}7";
+                resultLabel.Content = $"{resultLabel.Content}{button.Content}";
             }
         }
     }
